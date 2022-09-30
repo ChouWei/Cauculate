@@ -1,0 +1,13 @@
+{
+    "Setting": {
+        "Users": {
+            "TestUsers": [
+                {
+                    "UserName": "admin",
+                    "Password": "eYkL0DbKqSUsm2cghB93Pgc==aa"
+                }
+            ],
+            "AWS_Token": "eYkL0DbKqSUsm2cghB93Pgc==ab"
+        }
+    }
+}
