@@ -61,10 +61,6 @@ jobs:
           uses: ./ql/RedundantSelect.ql
           uses: ./ql/TestManually.ql
       packs: github/codeql
-    # Use these packs for Java analysis
-    # Here is where you build your code
-    - run: |
-      dotnet build
 
         
     # Autobuild attempts to build any compiled languages  (C/C++, C#, or Java).
