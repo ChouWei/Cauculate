@@ -2,3 +2,8 @@
 /obj
 /bin
 /*.bak
+.cache/data/*
+Security/*
+/.cache
+/.vscode
+codeql-pack.lock.yml
