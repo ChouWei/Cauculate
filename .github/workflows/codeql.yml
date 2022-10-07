@@ -42,7 +42,7 @@ jobs:
 
     # Initializes the CodeQL tools for scanning.
     - name: Initialize CodeQL
-      uses: github/codeql
+      uses: github/codeql-action/init@v2
       with:
         languages: ${{ matrix.language }}
         # If you wish to specify custom queries, you can do so here or in a config file.
@@ -62,7 +62,7 @@ jobs:
               uses: ./ql/EmptyBlock.ql
               uses: ./ql/RedundantSelect.ql
               uses: ./ql/TestManually.ql
-          packs: github/codeql
+          packs: ./ql
 
         
     # Autobuild attempts to build any compiled languages  (C/C++, C#, or Java).
