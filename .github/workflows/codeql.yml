@@ -53,7 +53,7 @@ jobs:
         # queries: security-extended,security-and-quality
 
         queries: ./ql
-        qlpack: github/codeql
+        # qlpack: github/codeql
         version: 0.4.1
         
     # Autobuild attempts to build any compiled languages  (C/C++, C#, or Java).
