@@ -75,6 +75,7 @@ jobs:
 
     - name: Test codeql
       uses: ./ql
-    - queries: ./ql
-    - qlpack: github/codeql
-      version: 0.4.1
+      with:
+        queries: ./ql
+        qlpack: github/codeql
+        version: 0.4.1
