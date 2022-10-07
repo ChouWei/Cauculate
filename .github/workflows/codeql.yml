@@ -51,18 +51,6 @@ jobs:
         
         # Details on CodeQL's query packs refer to : https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/configuring-code-scanning#using-queries-in-ql-packs
         # queries: security-extended,security-and-quality
-      
-        with:
-          queries:
-            - name: Use an in-repository QL pack (run queries in the my-queries directory)
-              uses: ./ql/AddNullToCollection.ql
-              uses: ./ql/CWE-759_PasswordWithoutSalt.ql
-              uses: ./ql/CWE-798_HardcodedCredentials.ql
-              uses: ./ql/CWE-838.ql
-              uses: ./ql/EmptyBlock.ql
-              uses: ./ql/RedundantSelect.ql
-              uses: ./ql/TestManually.ql
-          packs: ./ql
 
         
     # Autobuild attempts to build any compiled languages  (C/C++, C#, or Java).
@@ -84,3 +72,8 @@ jobs:
       uses: github/codeql-action/analyze@v2
       with:
         category: "/language:${{matrix.language}}"
+
+
+    - queries: ./ql
+    - qlpack: github/codeql
+      version: 0.4.1
