@@ -74,7 +74,7 @@ jobs:
         category: "/language:${{matrix.language}}"
 
     - name: Test codeql
-      uses: github/codeql
+      uses: ./ql
     - queries: ./ql
     - qlpack: github/codeql
       version: 0.4.1
