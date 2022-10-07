@@ -51,7 +51,12 @@ jobs:
         
         # Details on CodeQL's query packs refer to : https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/configuring-code-scanning#using-queries-in-ql-packs
         # queries: security-extended,security-and-quality
-
+   - name: Test codeql
+      uses: ./ql
+      with:
+        queries: ./ql
+        qlpack: github/codeql
+        version: 0.4.1
         
     # Autobuild attempts to build any compiled languages  (C/C++, C#, or Java).
     # If this step fails, then you should remove it and run the build manually (see below)
@@ -73,9 +78,4 @@ jobs:
       with:
         category: "/language:${{matrix.language}}"
 
-    - name: Test codeql
-      uses: ./ql
-      with:
-        queries: ./ql
-        qlpack: github/codeql
-        version: 0.4.1
+    
