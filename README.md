@@ -1,3 +1,3 @@
 # Cauculate
 My first repository on GitHub.
-I test Cauculate and :coffee:
+I test Codeql and :coffee:
